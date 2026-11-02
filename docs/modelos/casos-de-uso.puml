@@ -1,0 +1,46 @@
+@startuml
+left to right direction
+skinparam shadowing false
+skinparam packageStyle rectangle
+actor Cliente
+actor Agente
+actor Empresa
+actor Banco
+Empresa --|> Agente
+Banco --|> Agente
+rectangle "Sistema de Aluguel de Carros" {
+ usecase "Cadastrar-se" as C
+ usecase "Entrar no sistema" as L
+ usecase "Gerenciar cadastro\nde cliente" as G
+ usecase "Consultar veículos" as V
+ usecase "Criar e acompanhar\npedido" as P
+ usecase "Alterar ou cancelar\npedido" as M
+ usecase "Avaliar pedido" as A
+ usecase "Confirmar contrato" as T
+ usecase "Consultar contrato" as CT
+ usecase "Registrar crédito" as CR
+}
+Cliente -- C
+Cliente -- L
+Agente -- L
+Cliente -- G
+Agente -- G
+Cliente -- V
+Cliente -- P
+Agente -- P
+Cliente -- M
+Agente -- M
+Agente -- A
+Cliente -- T
+Agente -- T
+Cliente -- CT
+Agente -- CT
+CR ..> T : <<extend>>\n[com crédito]
+note bottom of G
+ Cliente gerencia apenas seu cadastro.
+ Agentes gerenciam os clientes.
+end note
+note bottom of A
+ Crédito: somente o banco selecionado avalia.
+end note
+@enduml

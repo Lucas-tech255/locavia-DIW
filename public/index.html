@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Locavia — gestão de pedidos e contratos de aluguel de carros."><title>Locavia · Aluguel de carros</title><link rel="stylesheet" href="assets/bootstrap.min.css"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+<header class="topbar"><div class="container-fluid px-lg-5 d-flex align-items-center justify-content-between gap-3 flex-wrap"><a href="#inicio" class="marca"><span class="marca-icone">L↗</span> locavia<span class="marca-ponto">.</span></a><div id="usuario-barra" class="d-flex align-items-center gap-3"><span class="small muted">Seu próximo caminho começa aqui.</span></div></div></header>
+<div id="aviso" role="status" aria-live="polite"></div>
+<main id="conteudo">
+<section id="acesso" class="container py-5">
+ <div class="row g-5 align-items-center"><div class="col-lg-7 hero"><p class="eyebrow">ALUGUEL DE CARROS, SEM COMPLICAÇÃO</p><h1>Mais caminhos.<br><span>Menos burocracia.</span></h1><p class="hero-copy">Escolha seu carro, acompanhe seu pedido e tenha as condições do contrato sempre à mão.</p><div class="hero-car"><img src="assets/fotos/carro-1.jpg" alt="Foto de referência de um Fiat Argo" width="760" height="310"></div><div class="hero-pontos"><span>01 <b>Escolha</b></span><span>02 <b>Solicite</b></span><span>03 <b>Acompanhe</b></span></div></div>
+ <div class="col-lg-5"><div class="painel painel-login"><p class="eyebrow">BEM-VINDO À LOCAVIA</p><h2>Acesse sua conta</h2><p class="muted">Seus pedidos e sua próxima viagem, em um só lugar.</p><form id="login-form"><label class="form-label" for="login-email">E-mail</label><input class="form-control mb-3" id="login-email" type="email" autocomplete="username" required><label class="form-label" for="login-senha">Senha</label><input class="form-control mb-4" id="login-senha" type="password" autocomplete="current-password" required><button class="btn btn-primary w-100" type="submit">Entrar <span aria-hidden="true">↗</span></button></form><p class="mt-4 small">Ainda não tem conta? <button class="link-button" id="abrir-cadastro">Cadastre-se</button></p><details class="demo-contas"><summary>Contas para demonstração</summary><p class="small mt-3">Todos os dados são fictícios.</p><button class="demo-item" data-demo="cliente">Cliente <span>cliente@locavia.test · Cliente123!</span></button><button class="demo-item" data-demo="empresa">Empresa <span>empresa@locavia.test · Agente123!</span></button><button class="demo-item" data-demo="banco">Banco <span>banco@locavia.test · Banco123!</span></button></details></div></div></div>
+</section>
+<div id="sistema" hidden>
+<div class="app-shell"><aside class="sidebar"><p class="eyebrow">ÁREA DE GESTÃO</p><nav aria-label="Navegação principal"><a href="#inicio" data-nav="inicio">◫ <span>Visão geral</span></a><a href="#veiculos" data-nav="veiculos">▱ <span>Veículos</span></a><a href="#pedidos" data-nav="pedidos">≡ <span>Pedidos</span></a><a href="#contratos" data-nav="contratos">▤ <span>Contratos</span></a><a href="#clientes" data-nav="clientes">♙ <span id="titulo-menu-cliente">Meu cadastro</span></a></nav><div class="sidebar-bottom"><span class="status-dot"></span> Dados sincronizados<br><small>Pedidos e contratos em um só lugar.</small></div></aside>
+<div class="app-content"><section class="page-heading"><div><p id="page-eyebrow" class="eyebrow">SEU PAINEL</p><h1 id="page-title">Visão geral</h1><p id="page-subtitle" class="muted"></p></div><div class="heading-actions" id="page-actions"></div></section><div id="pagina" aria-live="polite"></div></div></div>
+</div>
+</main>
+<footer class="rodape"><span>Locavia © 2026</span><span>Laboratório 02 · DIW · Lucas Barbosa · <a href="creditos-fotos.html">Créditos das fotos</a></span></footer>
+<dialog id="modal"><div class="modal-top"><h2 id="modal-titulo"></h2><button id="fechar-modal" type="button" class="fechar" aria-label="Fechar">×</button></div><div id="modal-corpo"></div></dialog>
+<noscript><div class="container py-4">Ative JavaScript para acessar o sistema.</div></noscript>
+<script src="js/app.js" defer></script>
+</body></html>

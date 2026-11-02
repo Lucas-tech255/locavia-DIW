@@ -1,0 +1,127 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Marina Exemplo",
+      "email": "cliente@locavia.test",
+      "papel": "cliente",
+      "tipoAgente": null,
+      "rg": "DEMO-001",
+      "cpf": "00000000001",
+      "endereco": "Rua de Demonstração, 100",
+      "profissao": "Analista",
+      "empregos": [
+        {
+          "entidade": "Empresa de Exemplo",
+          "rendimento": 4800
+        }
+      ],
+      "senhaInicial": "Cliente123!"
+    },
+    {
+      "id": 2,
+      "nome": "Locavia Locadora",
+      "email": "empresa@locavia.test",
+      "papel": "agente",
+      "tipoAgente": "empresa",
+      "senhaInicial": "Agente123!"
+    },
+    {
+      "id": 3,
+      "nome": "Banco Horizonte",
+      "email": "banco@locavia.test",
+      "papel": "agente",
+      "tipoAgente": "banco",
+      "senhaInicial": "Banco123!"
+    }
+  ],
+  "veiculos": [
+    {
+      "id": 1,
+      "matricula": "MAT-001",
+      "marca": "Fiat",
+      "modelo": "Argo",
+      "ano": 2025,
+      "placa": "DEM1A01",
+      "categoria": "Econômico",
+      "diaria": 119,
+      "cor": "#84bfab",
+      "proprietarioId": 2,
+      "tipoProprietario": "empresa",
+      "imagem": "assets/fotos/carro-1.jpg"
+    },
+    {
+      "id": 2,
+      "matricula": "MAT-002",
+      "marca": "Hyundai",
+      "modelo": "HB20",
+      "ano": 2025,
+      "placa": "DEM2A02",
+      "categoria": "Compacto",
+      "diaria": 139,
+      "cor": "#85a9d6",
+      "proprietarioId": 2,
+      "tipoProprietario": "empresa",
+      "imagem": "assets/fotos/carro-2.jpg"
+    },
+    {
+      "id": 3,
+      "matricula": "MAT-003",
+      "marca": "Volkswagen",
+      "modelo": "T-Cross",
+      "ano": 2026,
+      "placa": "DEM3A03",
+      "categoria": "SUV",
+      "diaria": 229,
+      "cor": "#c9b694",
+      "proprietarioId": 3,
+      "tipoProprietario": "banco",
+      "imagem": "assets/fotos/carro-3.jpg"
+    },
+    {
+      "id": 4,
+      "matricula": "MAT-004",
+      "marca": "Chevrolet",
+      "modelo": "Onix",
+      "ano": 2024,
+      "placa": "DEM4A04",
+      "categoria": "Compacto",
+      "diaria": 129,
+      "cor": "#b8a3ce",
+      "proprietarioId": 1,
+      "tipoProprietario": "cliente",
+      "imagem": "assets/fotos/carro-4.jpg"
+    },
+    {
+      "id": 5,
+      "matricula": "MAT-005",
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "ano": 2025,
+      "placa": "DEM5A05",
+      "categoria": "Sedã",
+      "diaria": 249,
+      "cor": "#95acb3",
+      "proprietarioId": 2,
+      "tipoProprietario": "empresa",
+      "imagem": "assets/fotos/carro-5.jpg"
+    },
+    {
+      "id": 6,
+      "matricula": "MAT-006",
+      "marca": "Jeep",
+      "modelo": "Renegade",
+      "ano": 2025,
+      "placa": "DEM6A06",
+      "categoria": "SUV",
+      "diaria": 239,
+      "cor": "#9cae83",
+      "proprietarioId": 3,
+      "tipoProprietario": "banco",
+      "imagem": "assets/fotos/carro-6.jpg"
+    }
+  ],
+  "pedidos": [],
+  "contratos": [],
+  "creditos": []
+}

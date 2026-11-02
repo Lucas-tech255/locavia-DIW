@@ -1,0 +1,71 @@
+@startuml
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+hide empty methods
+class Usuario {
+ id: int
+ nome: string
+ email: string
+ papel: cliente | agente
+ tipoAgente: empresa | banco
+ rg: string
+ cpf: string
+ endereco: string
+ profissao: string
+}
+class VinculoEmpregaticio {
+ entidade: string
+ rendimento: decimal
+}
+class Veiculo {
+ id: int
+ matricula: string
+ ano: int
+ marca: string
+ modelo: string
+ placa: string
+ diaria: decimal
+ tipoProprietario: string
+}
+class Pedido {
+ id: int
+ inicio: date
+ fim: date
+ total: decimal
+ status: string
+ comCredito: boolean
+}
+class Avaliacao {
+ parecer: string
+ justificativa: string
+ data: datetime
+}
+class Contrato {
+ id: int
+ numero: string
+ inicio: date
+ fim: date
+ valor: decimal
+ status: string
+}
+class Credito {
+ id: int
+ valor: decimal
+ parcelas: int
+ valorParcela: decimal
+}
+Usuario "1" *-- "0..3" VinculoEmpregaticio : possui [cliente]
+Usuario "1" -- "0..*" Veiculo : proprietário
+Usuario "1" -- "0..*" Pedido : solicita [cliente]
+Veiculo "1" -- "0..*" Pedido : objeto do aluguel
+Pedido "1" *-- "0..*" Avaliacao : recebe
+Usuario "1" -- "0..*" Avaliacao : emite [agente]
+Pedido "1" -- "0..1" Contrato : origina
+Contrato "1" -- "0..1" Credito : possui
+Usuario "1" -- "0..*" Credito : concede [banco]
+note bottom
+ Visão resumida dos dados implementados.
+ Identificadores ligam registros no JSON.
+ Vínculos e avaliações são listas embutidas.
+end note
+@enduml

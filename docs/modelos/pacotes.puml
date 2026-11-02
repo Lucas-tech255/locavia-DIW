@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+skinparam shadowing false
+skinparam packageStyle rectangle
+package "Apresentação" as P {
+ [HTML / CSS / Bootstrap]
+ [app.js]
+}
+package "Gestão de pedidos e contratos" as G {
+ [server.cjs]
+}
+package "Persistência" as D {
+ [JSON Server]
+ [db.json]
+}
+P ..> G : Fetch / JSON
+G ..> D : leitura e gravação
+@enduml

@@ -1,0 +1,200 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Marina Exemplo",
+      "email": "cliente@locavia.test",
+      "papel": "cliente",
+      "tipoAgente": null,
+      "rg": "DEMO-001",
+      "cpf": "00000000001",
+      "endereco": "Rua de Demonstração, 100",
+      "profissao": "Analista",
+      "empregos": [
+        {
+          "entidade": "Empresa de Exemplo",
+          "rendimento": 4800
+        }
+      ],
+      "salt": "6e65f47c2e8870211fa0d68822cb93ba",
+      "senhaHash": "a9a0c28d55a142692b454ffe5372d97aac2e7f97c55cc2c276da344abc2df95cc65663f86a5c2558423362a953dd127617d76fafbcad11c4872caa9809fbf43c"
+    },
+    {
+      "id": 2,
+      "nome": "Locavia Locadora",
+      "email": "empresa@locavia.test",
+      "papel": "agente",
+      "tipoAgente": "empresa",
+      "salt": "0889525dcddef387e59f1baf1144db26",
+      "senhaHash": "4b20a1f57436797d91daf022b6cacbc25ac5afd49420b0405ebd6b7eea6a6bd4293d14fbdb0bcd6508053b29e0bf89cd931dc717bf77d2192cf698262825cefd"
+    },
+    {
+      "id": 3,
+      "nome": "Banco Horizonte",
+      "email": "banco@locavia.test",
+      "papel": "agente",
+      "tipoAgente": "banco",
+      "salt": "99d791874cdfafc5d0a08338b7226a1d",
+      "senhaHash": "2dee12eadf4bc436674fcc96b44109a117ea8d2c8a6db7c064542882e54969f495fe6be5b417d473e2148440c7a580c59f9056a7a39220934376ad460a26e497"
+    }
+  ],
+  "veiculos": [
+    {
+      "id": 1,
+      "matricula": "MAT-001",
+      "marca": "Fiat",
+      "modelo": "Argo",
+      "ano": 2025,
+      "placa": "DEM1A01",
+      "categoria": "Econômico",
+      "diaria": 119,
+      "cor": "#84bfab",
+      "proprietarioId": 2,
+      "tipoProprietario": "empresa",
+      "imagem": "assets/fotos/carro-1.jpg"
+    },
+    {
+      "id": 2,
+      "matricula": "MAT-002",
+      "marca": "Hyundai",
+      "modelo": "HB20",
+      "ano": 2025,
+      "placa": "DEM2A02",
+      "categoria": "Compacto",
+      "diaria": 139,
+      "cor": "#85a9d6",
+      "proprietarioId": 2,
+      "tipoProprietario": "empresa",
+      "imagem": "assets/fotos/carro-2.jpg"
+    },
+    {
+      "id": 3,
+      "matricula": "MAT-003",
+      "marca": "Volkswagen",
+      "modelo": "T-Cross",
+      "ano": 2026,
+      "placa": "DEM3A03",
+      "categoria": "SUV",
+      "diaria": 229,
+      "cor": "#c9b694",
+      "proprietarioId": 3,
+      "tipoProprietario": "banco",
+      "imagem": "assets/fotos/carro-3.jpg"
+    },
+    {
+      "id": 4,
+      "matricula": "MAT-004",
+      "marca": "Chevrolet",
+      "modelo": "Onix",
+      "ano": 2024,
+      "placa": "DEM4A04",
+      "categoria": "Compacto",
+      "diaria": 129,
+      "cor": "#b8a3ce",
+      "proprietarioId": 1,
+      "tipoProprietario": "cliente",
+      "imagem": "assets/fotos/carro-4.jpg"
+    },
+    {
+      "id": 5,
+      "matricula": "MAT-005",
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "ano": 2025,
+      "placa": "DEM5A05",
+      "categoria": "Sedã",
+      "diaria": 249,
+      "cor": "#95acb3",
+      "proprietarioId": 2,
+      "tipoProprietario": "empresa",
+      "imagem": "assets/fotos/carro-5.jpg"
+    },
+    {
+      "id": 6,
+      "matricula": "MAT-006",
+      "marca": "Jeep",
+      "modelo": "Renegade",
+      "ano": 2025,
+      "placa": "DEM6A06",
+      "categoria": "SUV",
+      "diaria": 239,
+      "cor": "#9cae83",
+      "proprietarioId": 3,
+      "tipoProprietario": "banco",
+      "imagem": "assets/fotos/carro-6.jpg"
+    }
+  ],
+  "pedidos": [
+    {
+      "id": 1,
+      "clienteId": 1,
+      "veiculoId": 5,
+      "inicio": "2026-11-02",
+      "fim": "2026-11-02",
+      "dias": 1,
+      "diaria": 249,
+      "total": 249,
+      "comCredito": true,
+      "bancoId": 3,
+      "parcelas": 3,
+      "observacoes": "",
+      "status": "contratado",
+      "criadoEm": "2026-11-02T23:16:34.574Z",
+      "atualizadoEm": "2026-11-02T23:18:29.696Z",
+      "avaliacoes": [
+        {
+          "agenteId": 3,
+          "parecer": "aprovado",
+          "justificativa": "confirmado",
+          "data": "2026-11-02T23:18:25.247Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "clienteId": 1,
+      "veiculoId": 2,
+      "inicio": "2026-11-03",
+      "fim": "2026-11-07",
+      "dias": 5,
+      "diaria": 139,
+      "total": 695,
+      "comCredito": false,
+      "bancoId": null,
+      "parcelas": null,
+      "observacoes": "",
+      "status": "cancelado",
+      "criadoEm": "2026-11-02T23:21:21.854Z",
+      "atualizadoEm": "2026-11-02T23:22:00.535Z",
+      "avaliacoes": []
+    }
+  ],
+  "contratos": [
+    {
+      "id": 1,
+      "numero": "LOC-00001",
+      "pedidoId": 1,
+      "clienteId": 1,
+      "veiculoId": 5,
+      "proprietarioId": 2,
+      "tipoProprietario": "empresa",
+      "inicio": "2026-11-02",
+      "fim": "2026-11-02",
+      "valor": 249,
+      "criadoEm": "2026-11-02T23:18:29.696Z",
+      "aceitePor": 3,
+      "status": "ativo"
+    }
+  ],
+  "creditos": [
+    {
+      "id": 1,
+      "contratoId": 1,
+      "bancoId": 3,
+      "valor": 249,
+      "parcelas": 3,
+      "valorParcela": 83,
+      "observacao": "Simulação acadêmica sem juros; eventual diferença de centavos é ajustada na última parcela."
+    }
+  ]
+}

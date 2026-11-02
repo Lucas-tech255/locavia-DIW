@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+skinparam shadowing false
+node "Navegador do cliente ou agente" {
+ [Interface HTML / Bootstrap] as UI
+ [JavaScript / Fetch] as JS
+ UI -- JS
+}
+node "Servidor Node.js" {
+ [Rotas e regras / server.cjs] as R
+ [JSON Server / lowdb] as J
+ artifact "db.json" as DB
+ R --> J
+ J --> DB
+}
+JS --> R : HTTP /api + token
+R --> JS : respostas JSON
+@enduml
